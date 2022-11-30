@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Fall Limited Edition Sneakers",
+    "price": 125.0,
+    "description": "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.",
+    "qty": 7,
+    "discount": 50,
+    "ratings": 4.5,
+    "featured": true,
+    "category": "",
+    "image": "image.png",
+    "thumbnails": {
+      "thumbn_1": "thumbnail.png",
+      "thumbn_2": "thumbnail.png",
+      "thumbn_3": "thumbnail.png",
+      "thumbn_4": "thumbnail.png"
+    },
+    "company_name": "Sneaker Company"
+  },
+  {
+    "name": "Women's Blouse",
+    "price": 99.0,
+    "description": "These Blouse is a perfect match for you",
+    "qty": 5,
+    "discount": 50,
+    "ratings": 4.3,
+    "featured": true,
+    "category": "women",
+    "image": "image.png",
+    "thumbnails": {
+      "thumbn_1": "thumbnail.png",
+      "thumbn_2": "thumbnail.png",
+      "thumbn_3": "thumbnail.png",
+      "thumbn_4": "thumbnail.png"
+    },
+    "company_name": "Sneaker Company"
+  }
+]

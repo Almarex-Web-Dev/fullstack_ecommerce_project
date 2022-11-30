@@ -1,0 +1,34 @@
+@import '../../utils//mixin';
+
+// Headers varialbes
+$backgroundColor: rgb(232, 232, 232);
+
+// top header
+.top_header {
+  width: 100%;
+  height: 7vh;
+  background-color: $backgroundColor;
+  color: #fff;
+}
+
+// main_header styles
+.main_header {
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+  @include flexProperty;
+}
+
+// logo styles
+.logo_name {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  // display: block;
+  // position: relative;
+}
+.logo_name::after {
+  content: '.mall';
+  color: rgb(244, 178, 37);
+}
