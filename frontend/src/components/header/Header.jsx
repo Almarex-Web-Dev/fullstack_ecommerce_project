@@ -8,7 +8,6 @@ import './header.scss'
 const Header = () => {
   return (
     <header>
-      <div className="top_header"></div>
       {/* main header with logo, search input and user info */}
       <div className="main_header">
         <div className="logo_wrapper">
