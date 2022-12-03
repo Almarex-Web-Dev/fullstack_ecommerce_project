@@ -11,7 +11,8 @@ node_modules
 dist
 dist-ssr
 *.local
-.env
+.
+/ecommerce-product-page-main
 
 # Editor directories and files
 .vscode/*
