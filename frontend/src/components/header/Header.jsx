@@ -9,6 +9,7 @@ const Header = () => {
   return (
     <header>
       {/* main header with logo, search input and user info */}
+      <div className="top_header"></div>
       <div className="main_header">
         <div className="logo_wrapper">
           <span className="logo_name">Shop</span>
