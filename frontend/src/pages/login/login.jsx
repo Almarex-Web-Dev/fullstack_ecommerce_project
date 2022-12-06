@@ -1,7 +1,7 @@
 import React from 'react'
 import shoppingIMG from '../../assets/shopping.png'
 
-const login = () => {
+const Login = () => {
   return (
     <section className="login__page-wrapper">
       {/* login page content goes here */}
@@ -32,4 +32,4 @@ const login = () => {
   )
 }
 
-export default login
+export default Login

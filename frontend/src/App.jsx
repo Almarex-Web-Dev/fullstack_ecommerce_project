@@ -1,13 +1,24 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 
-// imports the components from the index file in the components folder
-import { Header } from './components'
+// React router dome
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+// default exports
+import { Login, Register, Home } from './pages/DefaultExports'
+
+// scss file
 import './App.css'
 
 function App() {
   return (
     <div className="">
-      <Header />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/Register" element={<Register />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   )
 }

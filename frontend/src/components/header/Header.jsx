@@ -5,6 +5,7 @@ import { VscHeart } from 'react-icons/vsc'
 
 // import the scss file
 import './header.scss'
+
 const Header = () => {
   return (
     <header>
