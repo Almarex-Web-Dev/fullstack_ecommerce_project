@@ -1,0 +1,72 @@
+.login__page-wrapper {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+.logign__content-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    178.25deg,
+    rgba(232, 232, 232, 0.834) 47.02%,
+    #f8531e 80.99%
+  );
+  position: relative;
+  flex-direction: column;
+}
+
+.login__content-wrapper {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__content {
+  width: 100%;
+  //   line-height: 0px;
+}
+
+.login__content h1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4rem;
+  line-height: 70px;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+.login__content p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  color: #7d7d7d;
+}
+
+// login page call to action button
+.login__content .round__button {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px;
+  background: #7d7d7d;
+  display: block;
+  width: 200px;
+  text-align: center;
+
+  //   Will continue to add more styles to the button
+}
+
+// image style
+.logign__content-section img {
+  width: 70%;
+  height: auto;
+  object-fit: cover;
+}
