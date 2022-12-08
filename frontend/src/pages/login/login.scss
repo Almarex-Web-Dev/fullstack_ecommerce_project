@@ -74,7 +74,7 @@
 // form__input-section
 
 .form__input-section {
-  width: 75%;
+  width: 70%;
   height: 80vh;
   display: flex;
   justify-content: center;
@@ -84,19 +84,60 @@
   border-radius: 10px;
 }
 
-// .form__wrapper{}
+.form__wrapper {
+  width: 80%;
+}
 
 .form__wrapper .avatar {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
+  border-radius: 100%;
   margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
   text-align: center;
 }
 
 .form__wrapper .avatar img {
   width: 100%;
-  height: auto;
+  // height: auto;
   margin-bottom: 15px;
+}
+
+// login option wrapper
+.login__option-wrapper {
+  text-align: center;
+}
+
+.sign_with_google {
+  width: 250px;
+  padding: 10px 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  background: hwb(0 100% 0%);
+  color: #000;
+  border-radius: 25px;
+  margin: 0 auto 20px;
+  justify-content: space-around;
+  box-shadow: 0 0 2px rgba(78, 77, 77, 0.492);
+}
+
+// main__form
+
+.main__form {
+  width: 100%;
+  // background: red;
+  // line-height: 3rem;
+}
+
+input[type='text'],
+input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  margin-bottom: 15px;
+  &:focus {
+    border: none;
+    outline: none;
+  }
 }
