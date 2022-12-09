@@ -75,7 +75,7 @@
 
 .form__input-section {
   width: 70%;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,12 +110,12 @@
 
 .sign_with_google {
   width: 250px;
-  padding: 10px 30px;
+  padding: 10px 20px;
   text-decoration: none;
   display: flex;
   align-items: center;
-  background: hwb(0 100% 0%);
-  color: #000;
+  background: #f8531e;
+  color: rgb(248, 248, 248);
   border-radius: 25px;
   margin: 0 auto 20px;
   justify-content: space-around;
