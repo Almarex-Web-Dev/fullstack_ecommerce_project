@@ -1,5 +1,9 @@
 import React from 'react'
 import shoppingIMG from '../../assets/shopping.png'
+import dummyAvatar from '../../assets/dummyAvatar.jpg'
+import { BsGoogle } from 'react-icons/bs'
+
+import { Link } from 'react-router-dom'
 
 import { FcGoogle } from 'react-icons/fc'
 
@@ -34,17 +38,28 @@ const Login = () => {
       <div className="form__input-section">
         <div className="form__wrapper">
           <div className="avatar">
+            <img src={dummyAvatar} alt="" width={50} />
             {/* user Avatar goes here */}
+            <h3>Hi Anabel</h3>
             {/* User name goes here */}
           </div>
-          {/* sign in with google jsx tags */}
-          <div className="sign_with_google">
-            <FcGoogle className="google_icon" />
-            <a href="#">
+          {/* sign in with google*/}
+          <div className="login__option-wrapper">
+            <a href="#" className="sign_with_google">
+              <BsGoogle color="#fff" className="google_icon" />
               <span>Sign in with google</span>
             </a>
+            <p
+              style={{
+                fontWeight: 'bold',
+                textAlign: 'center',
+                marginBottom: '20px',
+              }}
+            >
+              OR
+            </p>
           </div>
-          <p>OR</p>
+
           <form className="main__form">
             {/* Email input down here */}
             <div className="email__input">
@@ -60,21 +75,30 @@ const Login = () => {
             <div className="password__input">
               <input
                 type="password"
-                placeholder="Password"
+                placeholder="password"
                 value={''}
                 onChange={''}
               />
               <span></span>
             </div>
             {/* remember me option*/}
-            <div>
+            <div className="remmber__me-checkbox">
               <input type="checkbox" />
               <span>remember me</span>
             </div>
             {/* sign in button down here */}
-            <div className="submit__button">
-              <button type="submit">sign in</button>
-            </div>
+            <button className="submit__button" type="submit">
+              sign in
+            </button>
+            <span
+              style={{
+                marginTop: '10px',
+                display: 'block',
+                textAlign: 'center',
+              }}
+            >
+              Didn't have an account ? <Link to="/register">Register here</Link>
+            </span>
           </form>
         </div>
       </div>
