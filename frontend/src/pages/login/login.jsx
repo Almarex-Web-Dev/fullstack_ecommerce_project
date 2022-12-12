@@ -83,8 +83,8 @@ const Login = () => {
             </div>
             {/* remember me option*/}
             <div className="remmber__me-checkbox">
-              <input type="checkbox" />
-              <span>remember me</span>
+              <input type="checkbox" id="checkbox" />
+              <label htmlFor="checkbox">remember me</label>
             </div>
             {/* sign in button down here */}
             <button className="submit__button" type="submit">
