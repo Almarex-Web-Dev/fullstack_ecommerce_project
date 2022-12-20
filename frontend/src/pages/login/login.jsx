@@ -1,20 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import shoppingIMG from '../../assets/shopping.png'
 import dummyAvatar from '../../assets/dummyAvatar.jpg'
 import { BsGoogle } from 'react-icons/bs'
 
+import { Button } from '../../components'
+import { motion } from 'framer-motion'
+
 import { Link } from 'react-router-dom'
 
-import { FcGoogle } from 'react-icons/fc'
+// import { FcGoogle } from 'react-icons/fc'
 
 import './login.scss'
 const Login = () => {
+  const [login, setLogin] = useState({
+    email: '',
+    password: '',
+  })
+
+  const onChange = (e) => {
+    const { name, value } = e.target
+    setLogin((prevValue) => {
+      return { ...prevValue, [name]: value }
+    })
+  }
+
+  // execute the function on form submission
+  const onFormSubmission = (e) => {
+    e.preventDefault()
+
+    setLogin({
+      email: '',
+      password: '',
+    })
+  }
+
   return (
     <section className="login__page-wrapper">
       {/* login page content goes here */}
-      <div className="logign__content-section">
+      <div className="login__content-section">
         <div className="login__content-wrapper">
           <div className="login__content">
+            <motion.div></motion.div>
             <h1>Log in, enjoy shopping!</h1>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus
@@ -22,13 +48,8 @@ const Login = () => {
               morbi sit bibendum tincidunt. Risus fringilla amet quis tempus
               condimentum eu porttitor tempus. Sed sapien, bibendum id varius
             </p>
-            <a className="round__button" href="#">
-              <div>
-                <span className="bg"></span>
-                <span className="base"></span>
-                <span className="text">Explore more</span>
-              </div>
-            </a>
+            {/* Explore more button */}
+            <Button text="Explore more" />
           </div>
           {/* hero image for login page */}
         </div>
@@ -49,25 +70,18 @@ const Login = () => {
               <BsGoogle color="#fff" className="google_icon" />
               <span>Sign in with google</span>
             </a>
-            <p
-              style={{
-                fontWeight: 'bold',
-                textAlign: 'center',
-                marginBottom: '20px',
-              }}
-            >
-              OR
-            </p>
+            <p>OR</p>
           </div>
 
-          <form className="main__form">
+          <form className="main__form" onSubmit={onFormSubmission}>
             {/* Email input down here */}
             <div className="email__input">
               <input
-                type="text"
+                type="email"
                 placeholder="e.g youremail@gmail.com"
-                value={''}
-                onChange={''}
+                value={login.email}
+                onChange={onChange}
+                name="email"
               />
               <span></span>
             </div>
@@ -76,8 +90,9 @@ const Login = () => {
               <input
                 type="password"
                 placeholder="password"
-                value={''}
-                onChange={''}
+                value={login.password}
+                onChange={onChange}
+                name="password"
               />
               <span></span>
             </div>
@@ -90,16 +105,16 @@ const Login = () => {
             <button className="submit__button" type="submit">
               sign in
             </button>
-            <span
-              style={{
-                marginTop: '10px',
-                display: 'block',
-                textAlign: 'center',
-              }}
-            >
-              Didn't have an account ? <Link to="/register">Register here</Link>
-            </span>
           </form>
+          <span
+            style={{
+              marginTop: '10px',
+              display: 'block',
+              textAlign: 'center',
+            }}
+          >
+            Didn't have an account ? <Link to="/register">Register here</Link>
+          </span>
         </div>
       </div>
     </section>
