@@ -6,7 +6,7 @@
   place-items: center;
 }
 
-.logign__content-section {
+.login__content-section {
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -51,21 +51,8 @@
   color: #7d7d7d;
 }
 
-// login page call to action button
-.login__content .round__button {
-  text-decoration: none;
-  color: #ffffff;
-  padding: 10px;
-  background: #7d7d7d;
-  display: block;
-  width: 200px;
-  text-align: center;
-
-  //   Will continue to add more styles to the button
-}
-
 // image style
-.logign__content-section img {
+.login__content-section img {
   width: 70%;
   height: auto;
   object-fit: cover;
@@ -108,6 +95,12 @@
   text-align: center;
 }
 
+.login__option-wrapper p {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .sign_with_google {
   width: 250px;
   padding: 10px 20px;
@@ -130,7 +123,7 @@
   // line-height: 3rem;
 }
 
-input[type='text'],
+input[type='email'],
 input[type='password'] {
   width: 100%;
   padding: 10px;
@@ -157,4 +150,21 @@ input[type='password'] {
   background: #151f2f;
   color: #fff;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1100px) {
+  .login__page-wrapper {
+    grid-template-columns: 1fr;
+    // place-items: center;
+  }
+  .login__content-section {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .form__input-section {
+    width: 70%;
+    max-width: 500px;
+  }
 }
