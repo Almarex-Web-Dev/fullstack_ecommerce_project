@@ -51,10 +51,10 @@ const productSchema = new mongoose.Schema(
 )
 
 const productModel = mongoose.model('Product', productSchema)
-// productModel
-//   .watch()
-//   .on('change', (data) =>
-//     console.log(new Date().now(), `New data added to the db ${data}`),
-//   )
+productModel
+  .watch()
+  .on('change', (data) =>
+    console.log(new Date().now(), `New data added to the db ${data}`),
+  )
 
 module.exports = productModel
