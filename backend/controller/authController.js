@@ -8,7 +8,7 @@ const login = async (req, res) => {
   if (!email || !password) {
     return res.status(400).json({
       success: false,
-      cmessage: 'please provide your email or password',
+      message: 'please provide your email or password',
     })
   }
   const user = await userModel.findOne({ email })
@@ -21,14 +21,12 @@ const login = async (req, res) => {
     res.status(400).json({ error: 'Incorrect password' })
   }
   const token = await user.createToken()
-  res
-    .status(200)
-    .json({
-      success: true,
-      username: user.email,
-      token,
-      message: 'successfully loggedIn',
-    })
+  res.status(200).json({
+    success: true,
+    username: user.email,
+    token,
+    message: 'successfully loggedIn',
+  })
 }
 
 // register functionality
